@@ -13,7 +13,7 @@ from datetime import timedelta
 application = Flask(__name__)
 application.config['JSON_SORT_KEYS'] = False
 application.config['CELERY_BROKER_URL'] = 'redis://localhost:6379'
-application.config['CELERY_RESULT_BACKEND'] = 'redis://localhost:6379'
+application.config['CELERY_RESULT_BACKEND'] = r'redis://localhost:6379'
 
 engine = create_engine(r'sqlite:///contact_management_model.db', connect_args={'check_same_thread': False})
 metadata = MetaData(engine)
